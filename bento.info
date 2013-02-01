@@ -1,0 +1,30 @@
+Name: notsorandom
+Author: Pierre Chanial
+AuthorEmail: pierre.chanial@gmail.com
+Version: 1.0
+Summary: Non-random generators
+DescriptionFromFile: README.txt
+License: BSD
+
+Library:
+    Packages: notsorandom
+
+ConfigPy: notsorandom/config.py
+
+Path: noisedir
+    Description: Noise file path
+    Default: $datadir/notsorandom
+
+DataFiles: noise_files
+    SourceDir: data
+    TargetDir: $noisedir
+    Files: *.fits
+
+Path: idldir
+    Description: Path for IDL files
+    Default: $libdir/notsorandom
+
+DataFiles: idl_files
+    SourceDir: idl
+    TargetDir: $idldir
+    Files: *pro
