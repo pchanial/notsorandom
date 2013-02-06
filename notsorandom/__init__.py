@@ -45,6 +45,9 @@ class NotSoRandom(object):
 
         return output
 
+    def reset(self):
+        self._p = 0
+
 class NotSoNormal(NotSoRandom):
     FILE = 'randomn.fits'
     def __call__(self, loc=0., scale=1., size=None):
